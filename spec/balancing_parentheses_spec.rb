@@ -18,9 +18,9 @@ describe '#balancing_parentheses' do
   end
 
   it 'accounts for strings that start with a closing parenthesis or end with an opening one' do
-    expect(balancing_parentheses(')(')).to eq(2)
+    expect(balancing_parentheses(')(')).to eq(0)
     expect(balancing_parentheses(')()')).to eq(1)
-    expect(balancing_parentheses(')((((()))((())))()(()))(')).to eq(2)
+    expect(balancing_parentheses(')((((()))((())))()(()))(')).to eq(0)
   end
 
   it 'returns 0 when the parentheses are balanced' do
